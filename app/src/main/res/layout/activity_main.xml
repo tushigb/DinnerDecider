@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingBottom="130dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/dd_logo"
+                android:contentDescription="Logo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/food_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/input_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/input_placeholder" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:onClick="add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_add_text" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_decide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="decide"
+            android:layout_alignParentBottom="true"
+            android:text="@string/button_decide_text"
+            android:layout_marginHorizontal="5dp"/>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
